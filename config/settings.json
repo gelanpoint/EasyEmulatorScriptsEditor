@@ -1,0 +1,23 @@
+{
+    "adb_path": "C:\\Program Files\\Netease\\MuMu\\nx_main\\adb.exe",
+    "device_id": "127.0.0.1:16384",
+    "image_threshold": 0.7,
+    "log_level": "info",
+    "screenshot_dir": "screenshots",
+    "default_wait_time": 1.5,
+    "retry_count": 0,
+    "retry_interval": 0.01,
+    "variables": {
+        "timeout": 30
+    },
+    "device_addrs": [
+        "127.0.0.1:16384"
+    ],
+    "tesseract_path": "C:/Users/2025/Desktop/ai/new script/Tesseract-OCR/tesseract.exe",
+    "ocr_language": "eng+jpn",
+    "task_delay": 0.01,
+    "last_task_path": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/config/ceshi2.json",
+    "timer_enabled": true,
+    "timer_action": "定时关机",
+    "timer_time": "01:00:00"
+}

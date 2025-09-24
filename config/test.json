@@ -1,0 +1,41 @@
+[
+  {
+    "type": "set_variable",
+    "description": "新任务",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "name": "test",
+    "value": "0"
+  },
+  {
+    "type": "LOOP",
+    "description": "新任务",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": true,
+    "enable_timer": false,
+    "pre_condition": "test==0"
+  },
+  {
+    "type": "click",
+    "description": "再出击",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": true,
+    "enable_timer": true,
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/Image_1755422698091.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "END_LOOP",
+    "description": "新任务",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false
+  }
+]

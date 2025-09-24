@@ -1,0 +1,22 @@
+[
+  {
+    "type": "click",
+    "description": "点击bxb",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/paste_20250815_212900.png",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "click",
+    "description": "再出击",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/paste_20250815_230106.png",
+    "x": null,
+    "y": null
+  }
+]

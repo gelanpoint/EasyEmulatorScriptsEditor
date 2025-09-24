@@ -1,0 +1,52 @@
+[
+  {
+    "type": "click",
+    "description": "打开游戏",
+    "wait_for_success": true,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/paste_20250815_212900.png",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "click",
+    "description": "开始游戏",
+    "wait_for_success": true,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755433326753.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "LOOP",
+    "description": "新任务",
+    "wait_for_success": false,
+    "continue_on_fail": false
+  },
+  {
+    "type": "click",
+    "description": "再出击",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": true,
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/Image_1755422698091.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "END_LOOP",
+    "description": "新任务",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false
+  }
+]

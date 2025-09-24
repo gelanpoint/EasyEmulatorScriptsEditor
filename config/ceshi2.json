@@ -1,0 +1,480 @@
+[
+  {
+    "type": "set_variable",
+    "description": "开始游戏状态",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": true,
+    "enable_timer": false,
+    "name": "start_game",
+    "value": "0"
+  },
+  {
+    "type": "set_variable",
+    "description": "脚本状态",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": true,
+    "enable_timer": false,
+    "name": "stop_script",
+    "value": "0"
+  },
+  {
+    "type": "set_variable",
+    "description": "进入任务状态",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": true,
+    "enable_timer": false,
+    "name": "in_menu",
+    "value": "0"
+  },
+  {
+    "type": "set_variable",
+    "description": "进入副本状态",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": true,
+    "enable_timer": false,
+    "name": "enter",
+    "value": "0"
+  },
+  {
+    "type": "set_variable",
+    "description": "打副本",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": true,
+    "enable_timer": false,
+    "name": "fight",
+    "value": "1"
+  },
+  {
+    "type": "set_variable",
+    "description": "是否找到副本",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": true,
+    "enable_timer": false,
+    "name": "find_cage",
+    "value": "0"
+  },
+  {
+    "type": "set_variable",
+    "description": "战斗次数",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": true,
+    "enable_timer": false,
+    "name": "fight_time",
+    "value": "0"
+  },
+  {
+    "type": "LOOP",
+    "description": "主循环",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "stop_script==0"
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "是否未打开游戏",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "post_action": "start_game=0",
+    "on_fail_action": "start_game=1",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/paste_20250815_212900.png",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755433326753.jpg"
+    ],
+    "judge_only": true
+  },
+  {
+    "type": "LOOP",
+    "description": "开始游戏循环",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "start_game==0"
+  },
+  {
+    "type": "click",
+    "description": "点击游戏图标",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/paste_20250815_212900.png",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "click",
+    "description": "点击开始游戏",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "post_action": "start_game=1",
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755433326753.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "END_LOOP",
+    "description": "退出开始游戏循环",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "start_game==1"
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "是否处于主页面",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": true,
+    "enable_timer": false,
+    "post_action": "in_menu=0",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755923778576.jpg"
+    ],
+    "judge_only": true
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "在选择页吗？",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "post_action": "in_menu=0",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755432759070.jpg"
+    ],
+    "judge_only": true
+  },
+  {
+    "type": "LOOP",
+    "description": "进入副本菜单",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "in_menu==0",
+    "post_action": "enter=0;find_cage=0"
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "副本位置是否处于全",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "post_action": "enter=1",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755440320693.jpg"
+    ],
+    "judge_only": true
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "副本位置是否处于II",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "post_action": "enter=2",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755440345115.jpg"
+    ],
+    "judge_only": true
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "副本位置是否处于I",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "post_action": "enter=3",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755440377253.jpg"
+    ],
+    "judge_only": true
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "是否处于永续",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "post_action": "enter=4",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755441390957.jpg"
+    ],
+    "judge_only": true
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "在副本选择页面吗？",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "on_fail_action": "in_menu=1",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755432759070.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755433020582.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755433050733.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755433076118.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755440320693.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755440345115.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755440377253.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755441390957.jpg"
+    ],
+    "judge_only": true
+  },
+  {
+    "type": "click",
+    "description": "进入",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "enter==0",
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755923778576.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "click",
+    "description": "进入副本选择",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "enter==0",
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755432759070.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "click",
+    "description": "进入中2",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "enter==1",
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755432836749.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "click",
+    "description": "进入中1",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "enter==2",
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755432867592.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "click",
+    "description": "进入中",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "enter==3",
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755432897604.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "点击螃蟹",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "find_cage==0",
+    "post_action": "find_cage=1",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755432799052.jpg"
+    ],
+    "judge_only": false
+  },
+  {
+    "type": "wait",
+    "description": "延时一下，避免出错",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "find_cage==1",
+    "duration": 3.0
+  },
+  {
+    "type": "long_press",
+    "description": "没找到副本时划到对应位置",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "find_cage==0;enter==4",
+    "x": 1070,
+    "y": 1600,
+    "duration": 1500
+  },
+  {
+    "type": "click",
+    "description": "选择关卡",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "find_cage==1",
+    "post_action": "find_cage=2",
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755433020582.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "click",
+    "description": "选择难度",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "find_cage==2",
+    "post_action": "find_cage=3",
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755433076118.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "click",
+    "description": "出击准备",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "find_cage==3",
+    "target_text": "",
+    "target": "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755433050733.jpg",
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "END_LOOP",
+    "description": "不在主页面",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "in_menu==1"
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "处于战斗状态吗？",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "post_action": "fight=0",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755443670822.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/Image_1755422698091.jpg"
+    ],
+    "judge_only": true
+  },
+  {
+    "type": "LOOP",
+    "description": "循环副本",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "fight==0"
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "战斗",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": true,
+    "post_action": "fight_time=fight_time+1",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755443670822.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/Image_1755422698091.jpg"
+    ],
+    "judge_only": false
+  },
+  {
+    "type": "find_and_click_one",
+    "description": "处于战斗状态吗？",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "post_action": "fight=1",
+    "targets": [
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755432759070.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/paste_20250815_212900.png",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755433326753.jpg",
+      "C:/Users/2025/Desktop/ai/new script/screen-automation-tool/templates/qq_pic_merged_1755923778576.jpg"
+    ],
+    "judge_only": true
+  },
+  {
+    "type": "restart_app",
+    "description": "重启游戏",
+    "wait_for_success": false,
+    "continue_on_fail": true,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "fight_time>=300",
+    "post_action": "fight_time=0",
+    "package_name": "co.grimoire.bxb"
+  },
+  {
+    "type": "END_LOOP",
+    "description": "退出副本",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "fight==1"
+  },
+  {
+    "type": "END_LOOP",
+    "description": "退出主循环",
+    "wait_for_success": false,
+    "continue_on_fail": false,
+    "print_log": false,
+    "enable_timer": false,
+    "pre_condition": "stop_script==1"
+  }
+]

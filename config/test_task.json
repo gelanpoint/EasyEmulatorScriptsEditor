@@ -1,0 +1,15 @@
+[
+    {
+        "type": "screenshot",
+        "save_path": "test_screenshot.png"
+    },
+    {
+        "type": "wait",
+        "duration": 2
+    },
+    {
+        "type": "click",
+        "x": 100,
+        "y": 200
+    }
+]

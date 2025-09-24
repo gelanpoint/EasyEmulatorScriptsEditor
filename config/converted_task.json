@@ -1,0 +1,93 @@
+[
+  {
+    "type": "click",
+    "description": "点击 BD.png",
+    "target": "image/BD.png",
+    "threshold": 0.5,
+    "wait_for_success": false,
+    "continue_on_fail": false
+  },
+  {
+    "type": "wait",
+    "duration": 0.05,
+    "description": "点击后等待"
+  },
+  {
+    "type": "click",
+    "description": "点击 chuji.png",
+    "target": "image/chuji.png",
+    "threshold": 0.9,
+    "wait_for_success": false,
+    "continue_on_fail": true
+  },
+  {
+    "type": "wait",
+    "duration": 0.1,
+    "description": "点击后等待"
+  },
+  {
+    "type": "click",
+    "description": "点击 zaichuji.png",
+    "target": "image/zaichuji.png",
+    "threshold": 0.9,
+    "wait_for_success": false,
+    "continue_on_fail": true
+  },
+  {
+    "type": "wait",
+    "duration": 0.1,
+    "description": "点击后等待"
+  },
+  {
+    "type": "click",
+    "description": "点击 wumoli.png",
+    "target": "image/wumoli.png",
+    "threshold": 0.9,
+    "wait_for_success": false,
+    "continue_on_fail": false
+  },
+  {
+    "type": "wait",
+    "duration": 0.1,
+    "description": "点击后等待"
+  },
+  {
+    "type": "click",
+    "description": "点击 zhunbei.png",
+    "target": "image/zhunbei.png",
+    "threshold": 0.8,
+    "wait_for_success": false,
+    "continue_on_fail": false
+  },
+  {
+    "type": "wait",
+    "duration": 0.1,
+    "description": "点击后等待"
+  },
+  {
+    "type": "click",
+    "description": "点击 finish.png",
+    "target": "image/finish.png",
+    "threshold": 0.8,
+    "wait_for_success": false,
+    "continue_on_fail": false
+  },
+  {
+    "type": "wait",
+    "duration": 0.1,
+    "description": "点击后等待"
+  },
+  {
+    "type": "click",
+    "description": "点击 quxiao.png",
+    "target": "image/quxiao.png",
+    "threshold": 0.8,
+    "wait_for_success": false,
+    "continue_on_fail": false
+  },
+  {
+    "type": "wait",
+    "duration": 0.1,
+    "description": "点击后等待"
+  }
+]
